@@ -1,0 +1,100 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.googleimagesearcher.activities.FilterActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Spinner
+            android:id="@+id/spSizeSel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tvSizeSel"
+            android:layout_weight="1"
+            android:entries="@array/size_array"
+            android:prompt="@string/size_prompt" />
+
+        <TextView
+            android:id="@+id/tvColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/spColorSel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/tvSizeSel"
+            android:layout_alignTop="@+id/spColorSel"
+            android:layout_marginRight="18dp"
+            android:text="@string/color_prompt" />
+
+        <Spinner
+            android:id="@+id/spColorSel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spSizeSel"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/spSizeSel"
+            android:entries="@array/color_array"
+            android:prompt="@string/color_prompt"
+            android:layout_marginTop="14dp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tvType"
+            android:layout_toRightOf="@+id/tvColor"
+            android:entries="@array/type_array"
+            android:prompt="@string/type_prompt" />
+
+        <TextView
+            android:id="@+id/tvSizeSel"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/size_prompt" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         
+            android:layout_alignParentLeft="true"
+            android:layout_alignRight="@+id/tvColor"
+            android:layout_below="@+id/tvColor"
+            android:layout_marginTop="18dp"
+            android:text="@string/type_prompt" />
+
+        <EditText
+            android:id="@+id/etWebFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/spinner1"
+            android:layout_marginTop="18dp"
+            android:ems="10"
+            android:hint="@string/HintSearch" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinner1"
+            android:layout_below="@+id/etWebFilter"
+            android:layout_marginTop="26dp"
+            android:onClick="sendFilter"
+            android:text="@string/searchStr" />
+
+    </RelativeLayout>
+
+</FrameLayout>
