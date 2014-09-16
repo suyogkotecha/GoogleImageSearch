@@ -121,6 +121,7 @@ public class MainActivity extends Activity {
 				filter = concatenateFilterParams(filter, "imgsz", fp.size);
 				filter = concatenateFilterParams(filter, "imgtype", fp.type);
 				filter = concatenateFilterParams(filter, "imgcolor", fp.color);
+				filter = concatenateFilterParams(filter, "as_sitesearch", fp.filterWeb);
 				filterQuery = filter.toString();
 				String query = etQuery.getText().toString();
 				String url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q="+query+"&rsz=8&start="+this.page+"&"+filterQuery;
